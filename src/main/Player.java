@@ -35,15 +35,8 @@ public class Player {
             lifeCount--;
         }
         // Make player inventory invisible if the item doesn't exist
-        if(hasSword) {
-            gm.ui.swordLabel.setVisible(true);
-        } else gm.ui.swordLabel.setVisible(false);
-        if(hasShield) {
-            gm.ui.shieldLabel.setVisible(true);
-        } else gm.ui.shieldLabel.setVisible(false);
-        if(hasLantern) {
-            gm.ui.lanternLabel.setVisible(true);
-        } else gm.ui.lanternLabel.setVisible(false);
-
+        gm.ui.swordLabel.setVisible(hasSword);
+        gm.ui.shieldLabel.setVisible(hasShield);
+        gm.ui.lanternLabel.setVisible(hasLantern);
     }
 }
